@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +13,13 @@ const Navbar = () => {
       <div className="container mx-auto px-28 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className="text-xl font-semibold ml-2">LOGO</a>
+            <NavLink to="/" className="text-xl font-semibold ml-2">LOGO</NavLink>
           </div>
-          <div className="hidden md:flex space-x-4">
-            <a href="#" className="text-zinc-800 font-semibold hover:text-blue-500">VIP Numbers</a>
-            <a href="#" className="text-zinc-800 font-semibold hover:text-blue-500">Common Numbers</a>
-            <a href="#" className="text-zinc-800 font-semibold hover:text-blue-500">Result History</a>
-        
+          <div className="hidden md:flex space-x-4 items-center">
+            <NavLink to="#" className="text-zinc-800 font-semibold hover:text-blue-500">VIP Numbers</NavLink>
+            <NavLink to="#" className="text-zinc-800 font-semibold hover:text-blue-500">Common Numbers</NavLink>
+            {/* <NavLink to="/login" className="bg-zinc-600 py-2 px-5 rounded text-white font-semibold hover:text-blue-500">Login</NavLink> */}
+
           </div>
           <div className="md:hidden">
             <button className="text-gray-700 hover:text-blue-500" onClick={toggleMenu}>
