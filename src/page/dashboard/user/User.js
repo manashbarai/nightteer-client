@@ -6,7 +6,7 @@ const User = () => {
 
     const [userType, setUserType] = useState("my_user")
 
-
+    
     return (
 
         <div className=' flex flex-col gap-5 px-28 my-5'   >
