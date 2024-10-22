@@ -31,16 +31,16 @@ const HomePage = () => {
                     description:singleState.description
 
                 }
-                const resultData={
-                    day:r.day,
-                    result_1:r.result_1,
-                    result_2:r.result_2,
-                    
-                    month:r.month,
-                    year:r.year
-                }
+                const resultData = {
+                    day: r.day || new Date().getDate(),
+                    result_1: r.result_1 || " Wait For Result ... ",
+                    result_2: r.result_2 || " Wait For Result ... ",
+                    month: r.month || new Date().getMonth() + 1, 
+                    year: r.year || new Date().getFullYear() 
+                };
                 return <div className='w-3/4 mx-auto'>
                     <StateCard formData={data} key={resultData.day}  resultData={resultData} />
+
                 </div>
             })}
 
