@@ -9,6 +9,7 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <nav className="bg-sky-100 border-b shadow-sm">
       <div className="container mx-auto px-28 py-3">
         <div className="flex justify-between items-center">
@@ -18,6 +19,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4 items-center">
             <NavLink to="#" className="text-zinc-800 font-semibold hover:text-blue-500">VIP Numbers</NavLink>
             <NavLink to="#" className="text-zinc-800 font-semibold hover:text-blue-500">Common Numbers</NavLink>
+            <NavLink to="/history" className="text-zinc-800 font-semibold hover:text-blue-500">Previous Result</NavLink>
             {/* <NavLink to="/login" className="bg-zinc-600 py-2 px-5 rounded text-white font-semibold hover:text-blue-500">Login</NavLink> */}
 
           </div>
@@ -41,6 +43,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    </>
   );
 };
 
