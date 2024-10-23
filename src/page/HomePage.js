@@ -3,6 +3,8 @@ import { useGlobalSkills } from '../context/skillContext'
 import StateCard from './dashboard/state/StateCard'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Clock from '../components/Clock'
+import DateDisplay from '../components/DateModule'
 
 const HomePage = () => {
 
@@ -11,7 +13,16 @@ const HomePage = () => {
     return (
         <>
         <Navbar/>
-        <div className=' px-28 grid grid-cols-1 gap-20 my-10 '>
+        <div className='mt-5'>
+
+            <h1 className='text-3xl text-center font-semibold' >Today Result</h1>
+
+        <div className='flex justify-center  items-center gap-5'>
+          <DateDisplay/> <div> || </div>    <Clock/>  
+        
+        </div>
+        </div>
+        <div className='px-2 lg:px-28 grid grid-cols-1 gap-5 lg:gap-20 my-10 '>
             {result_day && state && result_day.map((r, i) => {
                 const singleState=state.find(s=>s.id===r.id)
                 const data = {
@@ -38,7 +49,7 @@ const HomePage = () => {
                     month: r.month || new Date().getMonth() + 1, 
                     year: r.year || new Date().getFullYear() 
                 };
-                return <div className='w-3/4 mx-auto'>
+                return <div className='w-full lg:w-3/4 mx-auto'>
                     <StateCard formData={data} key={resultData.day}  resultData={resultData} />
 
                 </div>
