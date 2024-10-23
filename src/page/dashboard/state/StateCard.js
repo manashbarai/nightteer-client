@@ -26,19 +26,19 @@ const StateCard = ({ formData, onEdit, onDelete, resultData }) => {
                     >
                         <tbody>
                             <tr>
-                                <td className="border border-gray-300 p-4 font-semibold">
+                                <td className="border border-gray-300 p-4 font-semibold text-center">
                                     F/R: ({formData.time.firstResult || "Time"})
                                 </td>
-                                <td className="border border-gray-300 p-4 font-semibold">
+                                <td className="border border-gray-300 p-4 font-semibold text-center">
                                     S/R: ({formData.time.secondResult || "Time"})
                                 </td>
 
                             </tr>
                             <tr>
-                                <td className="border border-gray-300 p-4 font-semibold">
+                                <td className="border border-gray-300 p-4 font-semibold text-center">
                                     {resultData?.result_1 ? resultData.result_1 : "Wait ..."}
                                 </td>
-                                <td className="border border-gray-300 p-4 font-semibold">
+                                <td className="border border-gray-300 p-4 font-semibold text-center">
                                     {resultData?.result_2 ? resultData.result_2 : "Wait ..."}
                                 </td>
 

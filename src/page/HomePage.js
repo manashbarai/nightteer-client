@@ -9,7 +9,7 @@ import DateDisplay from '../components/DateModule'
 const HomePage = () => {
 
     const { state, result_day } = useGlobalSkills()
-
+    
     return (
         <>
         <Navbar/>
@@ -17,8 +17,8 @@ const HomePage = () => {
 
             <h1 className='text-3xl text-center font-semibold' >Today Result</h1>
 
-        <div className='flex justify-center  items-center gap-5'>
-          <DateDisplay/> <div> || </div>    <Clock/>  
+        <div className='flex justify-center  flex-wrap items-center gap-5'>
+          <DateDisplay/> <div className='none lg:block'> || </div>    <Clock/>  
         
         </div>
         </div>

@@ -1,5 +1,6 @@
 // Clock.js
 import React, { useState, useEffect } from 'react';
+import { BsStopwatch } from "react-icons/bs";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());
@@ -21,8 +22,9 @@ const Clock = () => {
   };
 
   return (
-    <div className=" text-3xl font-bold py-4">
-      {formatTime(time)}
+    <div className=" text-3xl font-semibold py-4 flex items-center gap-1 ">
+     <BsStopwatch />
+     {formatTime(time)}
     </div>
   );
 };
