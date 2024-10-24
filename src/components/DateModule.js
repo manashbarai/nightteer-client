@@ -13,7 +13,7 @@ const DateDisplay = () => {
   });
 
   return (
-    <div className="text-center text-3xl font-medium py-4">
+    <div className="text-center text-3xl font-medium py-4  tect-red-600">
       {formattedDate}
     </div>
   );
